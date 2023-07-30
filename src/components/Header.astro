@@ -11,25 +11,9 @@ const pathname = removeTrailingSlash(Astro.url.pathname);
   >
 
   <nav role="navigation">
-    <ul role="list" class="flex flex-row gap-2">
+    <ul role="list" class="flex flex-row gap-2 cursor-pointer">
       <li>
-        <a
-          href="/"
-          class:list={{
-            ["hover:text-neutral-100"]: true,
-            ["text-neutral-100"]: pathname === "/",
-          }}>Home</a
-        >
-      </li>
-      <li>/</li>
-      <li>
-        <a
-          href="/posts"
-          class:list={{
-            ["hover:text-neutral-100"]: true,
-            ["text-neutral-100"]: pathname === "/posts",
-          }}>Posts</a
-        >
+        Download CV
       </li>
     </ul>
   </nav>

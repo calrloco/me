@@ -7,19 +7,19 @@ export type Project = {
 
 const projects: Project[] = [
   {
-    title: "Arch Linux Package",
-    techs: ["bash"],
+    title: "pepedickbutt.vip",
+    techs: ["Astro, TailwindCSS, Solidity"],
     link: "https://codenanshu.in/projects/ttf-apple-fonts/",
   },
   {
-    title: "Firstly",
-    techs: ["React Native", "JavaScript"],
-    link: "https://codenanshu.in/projects/firstly/",
+    title: "Letiziatriches.com",
+    techs: ["Laravel, React, TS, TailwindCSS, FilamentPHP"],
+    link: "https://letiziatriches.com",
   },
   {
-    title: "Astro / Template",
-    techs: ["Astro"],
-    link: "/"
+    title: "Novachem.ch",
+    techs: ["Larvael", "FilamentPHP, AlpineJs, TailwindCSS"],
+    link: "https://codenanshu.in/projects/firstly/",
   },
 ];
 

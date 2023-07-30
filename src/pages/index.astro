@@ -3,15 +3,63 @@ import { getCollection } from "astro:content";
 
 import Layout from "@/layouts/Layout.astro";
 import SocialLinks from "@/components/SocialLinks.astro";
-import PostCard from "@/components/PostCard.astro";
-import ProjectCard from "@/components/ProjectCard.astro";
+import ProjectCard, { formatTechs } from "@/components/ProjectCard.astro";
 import Link from "@/components/shared/Link.astro";
 import convertAsteriskToStrongTag from "@/utils/convertAsteriskToStrongTag";
-
 import presentation from "@/data/presentation";
 import projects from "@/data/projects";
-
-const posts = await getCollection("posts");
+const works: any = [
+  {
+    slug: "/",
+    data: {
+      title: "Fitprime - Fullstack web developer",
+      description: "",
+      dates: "jan 2021 - Sept 2022",
+      techs: [
+        "Laravel",
+        "React",
+        "VueJS",
+        "AlpineJs",
+        "Livewire",
+        "TailwindCSS",
+        "Mysql",
+        "Redis",
+      ],
+    },
+  },
+  {
+    slug: "/",
+    data: {
+      title: "ShippyPro - Fullstack web developer",
+      description: "",
+      dates: "Sep 2022 - Feb 2023",
+      techs: [
+        "React",
+        "Typescript",
+        "Drupal",
+        "Mysql",
+      ],
+    },
+  },
+  {
+    slug: "/",
+    data: {
+      title: "Atomica - Fullstack web developer",
+      description: "",
+      dates: "Feb 2023 - Current",
+      techs: [
+        "Laravel",
+        "React",
+        "Typescript",
+        "TailwindCSS",
+        "Livewire",
+        "Django",
+        "Mysql",
+        "Redis",
+      ],
+    },
+  },
+];
 ---
 
 <Layout>
@@ -30,53 +78,72 @@ const posts = await getCollection("posts");
         <h3 class="text-lg text-neutral-100">Latest posts</h3>
         <Link href="/posts" label="See all posts" isUnderline target="_self" />
       </header>
-      {posts.length === 0 && <p>Soon, stay connected 👀...</p>}
-
-      <section class="flex flex-col gap-4 md:flex-row md:flex-wrap">
+      <article class="flex flex-col gap-4">
         {
-          posts.length !== 0 &&
-            posts
-              .slice(0, 2)
-              .map((post) => (
-                <PostCard
-                  publishedAt={post.data.publishedAt}
-                  title={post.data.title}
-                  description={post.data.description}
-                  slug={post.slug}
-                />
-              ))
+          works.map((post) => (
+            <a
+              class="group flex flex-col gap-2 border-t border-neutral-700 py-4 transition-all hover:text-neutral-100"
+              href={`/works/${post.slug}`}
+            >
+              <div class="flex w-full items-center justify-between">
+                <h2 class="text-lg">{post.data.title}</h2>
+
+                <div class="flex flex-row items-center gap-4">
+                  <p>{post.data.dates}</p>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    class="transition-all duration-300 group-hover:translate-x-1"
+                  >
+                    <path
+                      d="M5.25 12.75L12.75 5.25"
+                      stroke="#999999"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M5.25 5.25H12.75V12.75"
+                      stroke="#999999"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <p>{post.data.description}</p>
+              <p>{formatTechs(post.data.techs)}</p>
+            </a>
+          ))
         }
-      </section>
-    </article>
-
-    <article class="flex flex-col gap-8">
-      <header class="flex w-full flex-row justify-between gap-2">
-        <h3 class="text-lg text-neutral-100">
-          Selected projects ({projects.length})
-        </h3>
-      </header>
-      {projects.length === 0 && <p>Oops, I must work^^^^^</p>}
-
-      <section class="flex flex-col gap-4">
-        {
-          projects.length !== 0 &&
-            projects.map((project) => <ProjectCard {...project} />)
-        }
-      </section>
-    </article>
-
-    <article class="flex flex-col gap-8">
-      <header class="flex w-full flex-row justify-between gap-2">
-        <h3 class="text-lg text-neutral-100">Get in touch</h3>
-      </header>
-      <p>
-        Email me at <Link
-          href={`mailto:${presentation.mail}`}
-          label={presentation.mail}
-        /> or follow me via my social links.
-      </p>
-
-      <SocialLinks />
+      </article>
     </article>
   </main>
+
+  <article class="flex flex-col gap-8">
+    <header class="flex w-full flex-row justify-between gap-2">
+      <h3 class="text-lg text-neutral-100">Freelance and Projects</h3>
+    </header>
+    <section class="flex flex-col gap-4">
+      {
+        projects.length !== 0 &&
+          projects.map((project) => <ProjectCard {...project} />)
+      }
+    </section>
+  </article>
+
+  <article class="flex flex-col gap-8">
+    <header class="flex w-full flex-row justify-between gap-2">
+      <h3 class="text-lg text-neutral-100">Get in touch</h3>
+    </header>
+    <p>
+      Email me at <Link
+        href={`mailto:${presentation.mail}`}
+        label={presentation.mail}
+      /> or follow me via my social links.
+    </p>
+
+    <SocialLinks />
+  </article>
 </Layout>
