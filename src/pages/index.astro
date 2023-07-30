@@ -1,6 +1,4 @@
 ---
-import { getCollection } from "astro:content";
-
 import Layout from "@/layouts/Layout.astro";
 import SocialLinks from "@/components/SocialLinks.astro";
 import ProjectCard, { formatTechs } from "@/components/ProjectCard.astro";
@@ -15,6 +13,7 @@ const works: any = [
       title: "Fitprime - Fullstack web developer",
       description: "",
       dates: "jan 2021 - Sept 2022",
+      link: "https://fitprime.com",
       techs: [
         "Laravel",
         "React",
@@ -33,6 +32,7 @@ const works: any = [
       title: "ShippyPro - Fullstack web developer",
       description: "",
       dates: "Sep 2022 - Feb 2023",
+      link: "https://shippypro.com",
       techs: [
         "React",
         "Typescript",
@@ -47,6 +47,7 @@ const works: any = [
       title: "Atomica - Fullstack web developer",
       description: "",
       dates: "Feb 2023 - Current",
+      link: "https://atomicastudio.com",
       techs: [
         "Laravel",
         "React",
@@ -82,8 +83,9 @@ const works: any = [
         {
           works.map((post) => (
             <a
-              class="group flex flex-col gap-2 border-t border-neutral-700 py-4 transition-all hover:text-neutral-100"
-              href={`/works/${post.slug}`}
+              class="group flex flex-col gap-2 border-t cursor-pointer border-neutral-700 py-4 transition-all hover:text-neutral-100"
+              href={post.data.link}
+              target="_blank"
             >
               <div class="flex w-full items-center justify-between">
                 <h2 class="text-lg">{post.data.title}</h2>

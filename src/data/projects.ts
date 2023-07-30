@@ -9,7 +9,7 @@ const projects: Project[] = [
   {
     title: "pepedickbutt.vip",
     techs: ["Astro, TailwindCSS, Solidity"],
-    link: "https://codenanshu.in/projects/ttf-apple-fonts/",
+    link: "https://pepedickbutt.vip",
   },
   {
     title: "Letiziatriches.com",
@@ -19,7 +19,7 @@ const projects: Project[] = [
   {
     title: "Novachem.ch",
     techs: ["Larvael", "FilamentPHP, AlpineJs, TailwindCSS"],
-    link: "https://codenanshu.in/projects/firstly/",
+    link: "https://novachem.ch",
   },
 ];
 
