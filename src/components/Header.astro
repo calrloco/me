@@ -1,6 +1,7 @@
 ---
 import removeTrailingSlash from "@/utils/removeTrailingSlash";
 import presentation from "@/data/presentation";
+import SocialLinks from "./SocialLinks.astro";
 
 const pathname = removeTrailingSlash(Astro.url.pathname);
 ---
@@ -12,9 +13,7 @@ const pathname = removeTrailingSlash(Astro.url.pathname);
 
   <nav role="navigation">
     <ul role="list" class="flex flex-row gap-2 cursor-pointer">
-      <!-- <li>
-        Download CV
-      </li> -->
+     <SocialLinks />
     </ul>
   </nav>
 </header>
