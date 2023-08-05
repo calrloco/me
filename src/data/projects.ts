@@ -7,8 +7,13 @@ export type Project = {
 
 const projects: Project[] = [
   {
-    title: "pepedickbutt.vip",
-    techs: ["Astro, TailwindCSS, Solidity"],
+    title: "bengala - coin",
+    techs: ["Astro, TailwindCSS, Contracts Wizard - Openzeppelin"],
+    link: "https://bengala.vip",
+  },
+  {
+    title: "pepedickbutt - coin",
+    techs: ["Astro, TailwindCSS, Contracts Wizard - Openzeppelin"],
     link: "https://pepedickbutt.vip",
   },
   {
