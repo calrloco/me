@@ -18,12 +18,12 @@ const projects: Project[] = [
   },
   {
     title: "Letiziatriches.com",
-    techs: ["Laravel, React, TS, TailwindCSS, FilamentPHP"],
+    techs: ["Laravel, React, TailwindCSS, FilamentPHP"],
     link: "https://letiziatriches.com",
   },
   {
     title: "Novachem.ch",
-    techs: ["Larvael", "FilamentPHP, AlpineJs, TailwindCSS"],
+    techs: ["Laravel", "FilamentPHP, AlpineJs, LW, TailwindCSS"],
     link: "https://novachem.ch",
   },
 ];
