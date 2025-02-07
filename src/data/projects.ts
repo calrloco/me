@@ -24,12 +24,12 @@ const projects: Project[] = [
   {
     title: "bengala - coin",
     techs: ["Astro, TailwindCSS, Contracts Wizard - Openzeppelin"],
-    link: "https://bengala.vip",
+    link: "https://bengalacoin.netlify.app",
   },
   {
     title: "pepedickbutt - coin",
     techs: ["Astro, TailwindCSS, Contracts Wizard - Openzeppelin"],
-    link: "https://pepedickbutt.vip",
+    link: "https://pepedb.netlify.app",
   },
 ];
 
