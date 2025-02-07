@@ -7,14 +7,9 @@ export type Project = {
 
 const projects: Project[] = [
   {
-    title: "bengala - coin",
-    techs: ["Astro, TailwindCSS, Contracts Wizard - Openzeppelin"],
-    link: "https://bengala.vip",
-  },
-  {
-    title: "pepedickbutt - coin",
-    techs: ["Astro, TailwindCSS, Contracts Wizard - Openzeppelin"],
-    link: "https://pepedickbutt.vip",
+    title: "exentiastays.com",
+    techs: ["Laravel, InertiaJs, React"],
+    link: "https://exentiastays.com",
   },
   {
     title: "Letiziatriches.com",
@@ -25,6 +20,16 @@ const projects: Project[] = [
     title: "Novachem.ch",
     techs: ["Laravel", "FilamentPHP, AlpineJs, LW, TailwindCSS"],
     link: "https://novachem.ch",
+  },
+  {
+    title: "bengala - coin",
+    techs: ["Astro, TailwindCSS, Contracts Wizard - Openzeppelin"],
+    link: "https://bengala.vip",
+  },
+  {
+    title: "pepedickbutt - coin",
+    techs: ["Astro, TailwindCSS, Contracts Wizard - Openzeppelin"],
+    link: "https://pepedickbutt.vip",
   },
 ];
 
