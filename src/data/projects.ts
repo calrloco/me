@@ -6,6 +6,11 @@ export type Project = {
 };
 
 const projects: Project[] = [
+ {
+    title: "Move Around It",
+    techs: ["NextJs, TailwindCSS"],
+    link: "https://move-around-it.vercel.app/",
+  },
   {
     title: "exentiastays.com",
     techs: ["Laravel, InertiaJs, React"],
