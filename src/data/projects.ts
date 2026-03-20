@@ -9,7 +9,7 @@ const projects: Project[] = [
  {
     title: "Move Around It",
     techs: ["NextJs, TailwindCSS"],
-    link: "https://move-around-it.vercel.app/",
+    link: "https://movearoundit.com/",
   },
   {
     title: "exentiastays.com",
